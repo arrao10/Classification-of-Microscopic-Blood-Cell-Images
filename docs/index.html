@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MBC Classifier – Notebook Viewer</title>
+  <style>
+    :root{
+      /* Hematology-inspired palette */
+      --bg:#0b0a0d;        /* near-black with subtle warmth */
+      --fg:#f1f5f9;        /* slate-100 */
+      --muted:#9aa5b1;     /* slate-400/450 */
+      --card:#111827;      /* gray-900 */
+      --accent:#e11d48;    /* rose-600 (hematology red) */
+      --accent-2:#7c3aed;  /* violet-600 (stain purple) */
+      --accent-3:#f472b6;  /* pink-400 (eosin tint) */
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--fg);
+      background:
+        radial-gradient(1200px 600px at 85% -10%, rgba(225,29,72,.22), transparent 60%),
+        radial-gradient(1000px 550px at 10% 10%, rgba(244,114,182,.14), transparent 55%),
+        radial-gradient(900px 520px at -10% 110%, rgba(124,58,237,.20), transparent 60%),
+        var(--bg);
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .card{
+      width:min(760px, 95vw);
+      background:rgba(17,24,39,.86);
+      backdrop-filter: blur(8px);
+      border:1px solid rgba(154,165,177,.28);
+      border-radius:20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.48);
+      padding:28px 24px;
+      text-align:center;
+    }
+    h1{
+      margin:6px 0 10px;
+      font-size: clamp(26px, 4vw, 34px);
+      letter-spacing:.2px;
+    }
+    p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.5;
+      font-size: clamp(14px, 2.4vw, 16px);
+    }
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:12px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      border:1px solid rgba(154,165,177,.38);
+      background:#0e0c12;
+      color:var(--fg);
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      box-shadow:0 4px 14px rgba(0,0,0,.28);
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 8px 22px rgba(0,0,0,.38); }
+    .btn:active{ transform: translateY(0); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), #b91c1c 35%, var(--accent-2) 85%);
+      border-color: transparent;
+      color:#1a060a; /* dark text for contrast on warm gradient */
+      text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+    .small{ margin-top:16px; font-size:13px; color:var(--muted); }
+    .emoji{ font-size: 1.25em; }
+    .site-footer{
+      position: fixed;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .2px;
+      opacity: .95;
+      text-align:center;
+      padding: 0 12px;
+      backdrop-filter: blur(2px);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="emoji">🧫🧬🩸</div>
+    <h1>Classification of Microscopic Blood Cell Images</h1>
+    <p>View Code & Results in your Browser - No Setup Needed</p>
+    <div class="buttons">
+      <a class="btn primary" href="./MBC_Classifier.html">Open MBC_Classifier</a>
+      <a class="btn" href="./MBC_Classifier.html" download>Download MBC_Classifier.html</a>
+    </div>
+    <p class="small">Your Time Matters - Here’s a Fast, Visual Classification Demo.</p>
+  </main>
+  <footer class="site-footer">© 2025 Anirudh Raghavendra Rao -⚡Code → Classification⚡</footer>
+</body>
+</html>
